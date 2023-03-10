@@ -51,8 +51,6 @@ int readFile(char *filename, int *numChars, char *buffer) {
         }
         strcpy(buffer + pos, line); // copy the line to the buffer
         pos += len; // increment the position in the buffer
-
-
         chp = fgets(line, LINELEN, fp); // read the next line
     }
 
@@ -221,7 +219,7 @@ void runRandomSearch(int RAND_ELEMENTS, int NUM_THREADS) {
 }
 
 int main(int argc, char *argv[]) {
-//    runReadfileSearch(argc, argv);
+    runReadfileSearch(argc, argv);
 
 //    printf("--------------------\n");
 //    int RAND_ELEMENTS = 1000000; // 1 million
@@ -242,7 +240,6 @@ int main(int argc, char *argv[]) {
 
 
     }
-
 
 //    printf("--------------------\n");
 //    RAND_ELEMENTS = 1000000000; // 1 billion
